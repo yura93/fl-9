@@ -1,0 +1,127 @@
+/* #1 Fix print version*/
+@media print{
+    div.tm-sidebar, #about, .blocks, #ideas, img.img-fluid, #contact, .heading {
+        display : none;
+   }
+    div > div.pad > h2.tm-section-title {
+        color : #3d33ff;
+   }
+    div.tm-main-content {
+        margin-left : 0;
+        padding-left : 0;
+   }
+    .tm-banner{
+        height: 250px;
+   }
+    .tm-content-box{
+        margin-bottom: 0px;
+   }
+    .pad{
+        padding: 0px;
+   }
+    .flex-item img{
+        padding-left: 30%;
+   }
+    .tm-team-description-container{
+        max-width: 1300px;
+   }
+    div.tm-content-box{
+        display: block;
+   }
+    #home{
+        padding-left: 0px;
+        padding-right: 0px;
+   }
+}
+  /* #2 Round images  and add hover effect */
+  #about img{
+    border-radius: 50%;
+  }
+  #about h2:hover { 
+    background-color: #76cdd7;
+    color:white;
+     font-weight: 900;
+}
+/* #3 Change first lettter each paragraph*/
+   p:first-letter{
+    color:#76cdd7;
+    font-size: 30px;
+   }
+ /*  #4 Box shadow */   
+   .tm-sidebar,.tm-content-box{
+    box-shadow:  2px 2px !important;
+   }
+   /* #5 Add triangle to each section */
+  #home::before, section::before {
+    content: ''; 
+    position: relative;
+    top: 30px;
+    left: 0px;
+    width: 0;
+  height: 0;
+  border-top: 30px solid #76cdd7; 
+  border-right: 150px solid transparent;  
+   }
+   /* #6 Change color and letter spacing of ‘How We Do It’*/
+   .active h2{
+  color:gainsboro;
+  letter-spacing: 5px;
+   }
+   /* #7 Add italic font style to each paragraph after h2*/
+    h2+p{
+      font-style: italic;
+    }
+     /* #8 Change text indent and line height of  <p> element*/
+   section:nth-child(2) p{
+    
+    line-height: 200%;
+    text-indent: 25px;
+   }
+   /* #9 Style content block*/  
+  .heading h2{
+  color: #76cdd7;
+  text-align: center;
+ }
+    a{
+      color:black;
+    }
+    a:visited{
+  color: silver;
+ }
+  a:hover{
+    color:#76cdd7;
+ }
+    a.text:after {
+       content: "New";
+       vertical-align: text-top;
+       color: red;
+       font-size: 8px;
+ }
+ /* #10 Add layout and styles */
+ .gallery-container li:nth-child(odd){
+  background-color: #f2f2f2;
+  
+  }
+  .gallery-container li p:first-letter{
+  color:black 
+  }
+  /* #11 Add silver border on the bottom side of all list item exept the last*/
+
+ .tm-nav-item {
+  border-bottom: dotted;
+  border-color: silver;
+ }
+  .tm-nav-item:last-child{
+  border:none;
+ }
+  /* #12  Change text color in text input and submit button to red*/
+ input[type = "text"]{
+  color:red;
+ }
+ button[type = "submit"]{
+  color: red;
+ }
+ button[type = "submit"]:hover{
+  background-color: #76cdd7;
+ }
+ 
