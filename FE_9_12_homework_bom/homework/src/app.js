@@ -1,9 +1,11 @@
 const root = document.getElementById('root');
 const todoItems = [{
     isDone: 'assets/img/todo-s.png',
+    isDone2: 'assets/img/done-s.png',
     id: 12345,
     description: 'Todo 1'
 }];
+localStorage.setItem('todoItems', JSON.stringify(todoItems));
 createMainPage(todoItems, root);
 window.addEventListener('hashchange', function() {
     if (location.hash === '') {
@@ -39,6 +41,9 @@ function createMainPage(arr, parentContainer) {
         description.addEventListener('click', function() {
             location.hash = '#/modify/' + arr[i].id;
         });
+         isDone.addEventListener('click', function() {
+            isDone.setAttribute('src', arr[i].isDone2);
+        })
         buttonDelete.addEventListener('click', function() {
             delete arr[i];
             location.hash = '';
