@@ -1,0 +1,15 @@
+#root {
+ 
+	align-items: center; 
+	justify-content: center;
+}
+
+.item{
+
+	display: flex;
+}
+button{
+	border-radius: 10%;
+	margin: 10px;
+}
+
